@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // NOTE: Update this to include the paths to all files that contain Nativewind classes.
-  content: ["./App.tsx", "./components/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./app/**/*.{js,jsx,ts,tsx}",      // For Expo Router pages
+    "./components/**/*.{js,jsx,ts,tsx}", // For shared components
+    "./screens/**/*.{js,jsx,ts,tsx}",   // (if using screens directory)
+    "./App.{js,jsx,ts,tsx}",            // Root file
+  ],
   presets: [require("nativewind/preset")],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+};
